@@ -54,7 +54,7 @@ def train(num_gpus, rank, group_name, batch_size=1, seed=1234):
     ref_embeds = ref_embeds.to(device)
     ref_embeds = ref_embeds.unsqueeze(1).repeat(1, 32, 1).reshape(100, 4, 2048)
 
-    val_path = '/mnt1/hongcz/waveglow_fn_encoder_10_13/vctk_100spk/wav_after_aac/kbps/val_32kbps_npy'
+    val_path = 'testdata/wav_after_aac/kbps/val_32kbps_npy'
     mp3_list = sorted(os.listdir(val_path))
 
     os.chdir(sys.path[0])
