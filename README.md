@@ -25,7 +25,7 @@ pretrained_models/spk_emb_VCTK_ge2e # Original Speaker Embeddings
 
 wav_after_aac/kbps/val_32kbps_npy # Audio after lossy transmission
 ```
-
+To download our models and audios, please visit: https://drive.google.com/drive/folders/133O8WGeslIsfcdRmlcrCGYuO67ARJUPx?usp=drive_link
 ## Running
 
 You can execute the tracing stage by running :
