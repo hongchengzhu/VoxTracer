@@ -1,0 +1,5 @@
+numpy==1.21.6
+tqdm==4.64.0
+soundfile==0.10.3
+librosa==0.8.0
+scypy==1.7.3
