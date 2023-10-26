@@ -1,8 +1,8 @@
 # VoxTracer
 
-Official Implementation of VoxTracer (ACM MM 2023). In this implementation, you can partially reproduce the tracing stage of our framework.
+Official Implementation of VoxTracer (ACM MM 2023). By this repo, you can partially reproduce the tracing stage (speaker verification) of our framework.
 
-Thanks [@Demo36days](https://github.com/Demo36days) for helping build this project.
+Thank [@Demo36days](https://github.com/Demo36days) for helping build this project.
 
 ## Environment
 
@@ -12,14 +12,14 @@ Thanks [@Demo36days](https://github.com/Demo36days) for helping build this proje
 pip install -r requirements.txt
 ```
 
-You need to install pytorch as well. In our case, torch 1.13.1 is installed to support the deep learning.
+You need to install PyTorch as well. In our case, torch 1.13.1 is installed.
 
 
 ## What you should download before running our code
 
 ### Pre-trained models
 
-In this implementation, we provide necessary pre-trained models for the tracing stage. The storage locations for all models provided are as follows:
+In this implementation, we provide the necessary pre-trained models for the tracing stage. The storage locations for all models provided are as follows:
 
 ```
 pretrained_models/infer/decoder_35599.pt # ID Decoder which converts hidden variable z to embedding
@@ -37,7 +37,7 @@ Due to the very large amount of data, we just provide partial data for testing t
 
 First, you should create a new direction in the current path, i.e., ```mkdir testdata/wav_after_aac/kbps```. Then, download *val_32kbps_npy* from the above link and place it to the newly created path.
 
-It should be noted that the provided audios are compressed into .m4a format using **AAC compression**, and then **decompressed and stored in .npy format**, which makes the loading period much faster. If you want to test other compression (like MP3, Opus, and SILK), you should self-prepare your data and self-train your model.
+It should be noted that the provided audios are compressed into .m4a format using **AAC compression**, and then **decompressed and stored in .npy format**, which makes the loading process much faster. If you want to test other compression (like MP3, Opus, and SILK), you should self-prepare your data and self-train your model.
 
 
 ## Running
@@ -50,13 +50,13 @@ You can execute the tracing stage by running :
 python inference_for_tracing.py
 ```
 
-The source code will load all pre-trained models above and generate corresponding restored speaker embeddings, based on the compressed audio provided.
+The source code will automatically load all pre-trained models above and generate corresponding restored speaker embeddings, based on the compressed audio provided.
 
 
-After having the restored embeddings, we calculate cosine similarity of each audio and their original embedding, and determine whether the restored embedding is accurate (cosine similarity must exceed the threshold which is calculated by the training set, 0.9513). And the output will be written in ***output/test_vctk_aac_32kbps_35599.txt***.
+After having the restored embeddings, we calculate the cosine similarity between each recovered speaker embedding and the original one, and determine whether the restored embedding is accurate (cosine similarity must exceed the threshold which is calculated by the training set, 0.9513). And the output will be written in ***output/test_vctk_aac_32kbps_35599.txt***.
 
 ### Training
-We provide the training code of the tracing stage in *train_for_tracing.py*. However, if you'd like to build your own model, we strongly advise you self-prepare your data and model, and self-train your own model.
+We provide the training code of the tracing stage in *train_for_tracing.py*. However, if you'd like to build your own model, we strongly advise you to self-prepare your data and model, and self-train your own model.
 
 
 ## Citation
