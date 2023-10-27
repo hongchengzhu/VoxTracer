@@ -62,7 +62,22 @@ We provide the training code of the tracing stage in *train_for_tracing.py*. How
 ## Citation
 If you find this useful for your research, please cite our paper:
 ```
-Yanzhen Ren, Hongcheng Zhu, Liming Zhai, Zongkun Sun, Rubing Shen, and Lina Wang. 2023. Who is Speaking Actually? Robust and Versatile Speaker Traceability for Voice Conversion. In Proceedings of the 31st ACM International Conference on Multimedia (MM ’23), October 29–November 3, 2023, Ottawa, ON, Canada. ACM, New York, NY, USA, 12 pages. https://doi.org/10.1145/3581783.3612333
+@inproceedings{zhu2023voxtracer,
+author = {Ren, Yanzhen and Zhu, Hongcheng and Zhai, Liming and Sun, Zongkun and Shen, Rubing and Wang, Lina},
+title = {Who is Speaking Actually? Robust and Versatile Speaker Traceability for Voice Conversion},
+year = {2023},
+isbn = {9798400701085},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3581783.3612333},
+doi = {10.1145/3581783.3612333},
+booktitle = {Proceedings of the 31st ACM International Conference on Multimedia},
+pages = {8674–8685},
+numpages = {12},
+keywords = {robustness, versatility, voice conversion, speaker traceability},
+location = {Ottawa ON, Canada},
+series = {MM '23}
+}
 ```
 
 
